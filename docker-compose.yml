@@ -41,7 +41,7 @@ services:
     image: arbazm10/vprofileweb
     container_name: vproweb
     ports:
-      - "80:80"
+      - "81:80"
 
 volumes:
    vprodbdata: {}
