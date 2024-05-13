@@ -21,6 +21,8 @@ RUN cd vprofile-project13may && git checkout docker && mvn install
 
 FROM tomcat:9-jre11
 RUN rm -rf /usr/local/tomcat/webapps/*
+LABEL "Project"="Vprofile"
+LABEL "Author"="Arbaz"
 COPY  --from=BUILD_IMAGE vprofile-project13may/target/vprofile-v2.war /usr/local/tomcat/webapps/ROOT.war
 
 EXPOSE 8080
